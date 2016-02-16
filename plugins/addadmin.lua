@@ -5,7 +5,7 @@ local function callback(extra, success, result)
 end
     function run(msg, matches)
         if not is_momod or not is_owner then
-    return "Only Onwers Can Add WilSoN!"
+    return "Only Onwers Can Add iman!"
 end
     local user = 'user#id'
     local chat = 'chat#id'..msg.to.id
@@ -17,7 +17,7 @@ return {
       "Addadmin: Add Sudo In Group."
       },
     patterns = {
-        "^([Aa]ddadmin)$"
+        "^([Aa]ddiman)$"
         },
     run = run
 }
