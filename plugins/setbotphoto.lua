@@ -35,7 +35,7 @@ local function run(msg,matches)
 end
 return {
   patterns = {
-  "^[Ss](etbotphoto)$",
+  "^[!/](setbotphoto)$",
   "%[(photo)%]"
   },
   run = run,
