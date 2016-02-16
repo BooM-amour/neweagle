@@ -14,7 +14,7 @@ local function check_member_autorealm(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           lock_name = 'yes',
-          lock_photo = 'no',
+          lock_photo = 'yes',
           lock_member = 'no',
           flood = 'yes'
         }
@@ -44,7 +44,7 @@ local function check_member_realm_add(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           lock_name = 'yes',
-          lock_photo = 'no',
+          lock_photo = 'yes',
           lock_member = 'no',
           flood = 'yes'
         }
@@ -76,7 +76,7 @@ function check_member_group(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           lock_name = 'yes',
-          lock_photo = 'no',
+          lock_photo = 'yes',
           lock_member = 'no',
           flood = 'yes',
         }
@@ -108,7 +108,7 @@ local function check_member_modadd(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           lock_name = 'yes',
-          lock_photo = 'no',
+          lock_photo = 'yes',
           lock_member = 'no',
           flood = 'yes',
         }
@@ -1606,14 +1606,14 @@ return {
   "^(rem)$",
   "^(rem) (realm)$",
   "^(rules)$",
-  "^([Mm]ega) (satan)$",
+  "^([Mm]ega) (fa)$",
   "^(about)$",
   "^(setname) (.*)$",
   "^(setphoto)$",
   "^(promote) (.*)$",
   "^(promote)",
   "^(help)$",
-  "^([Mm]egasatan)$",
+  "^([Mm]egafa)$",
   "^(clean) (.*)$",
   "^(kill) (chat)$",
   "^(kill) (realm)$",
