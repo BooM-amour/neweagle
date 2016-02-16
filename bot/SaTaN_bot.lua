@@ -204,7 +204,7 @@ function load_config( )
   for v,user in pairs(config.sudo_users) do
     print("Allowed user: " .. user)
   end
-  local config = loadfile ("./plugins/banhammer.lua")()
+ local config = loadfile ("./data/config.lua")()
   for v,user in pairs(config.sudo_users) do
     print("Allowed user: " .. user)
   end
@@ -241,7 +241,7 @@ function create_config( )
     about_text = [[mega_fa V 1
     Advanced Bot Base On Seed
     
-    @WilSoN_DeVeLoPeR[DeVeLoPeR] 
+    @Dawsh_iman[DeVeLoPeR] 
     @Dawsh_saman_redstar
     
 ]],
