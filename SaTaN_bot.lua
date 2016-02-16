@@ -322,6 +322,116 @@ This command will send text to [group_id]
 *Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
+
+Addiman: Add Sudo In Group.
+======================
+pm: Send Pm To Priavate Chat.
+block: Block User [id].
+unblock: Unblock User [id].
+markread on: Reads Messages agancy Bot.
+markread off: Don't Reads Messages agancy Bot.
+setbotphoto: Set New Photo For Bot Account.
+contactlist: Send A List Of Bot Contacts.
+dialoglist: Send A Dialog Of Chat.
+delcontact: Delete Contact.
+import: Added Bot In Group With Link.
+======================
+all: All Actions In Group.
+all [id]: All Actions From [id].
+======================
+lock arabic: If Speak Persian Of Arabic, Bot Removed User.
+unlock arabic: Anyone Can Speak Pesrain Or Arabic.
+======================
+banall: Banned User Of All Groups.
+unbanall: Removed User Of Globally Ban List.
+ban: Ban User Of Group.
+unban: Removed User From Ban List.
+kick: Kick User Of Group.
+kickme: Kick You Of Group.
+banlist: List Of Banned Of Group.
+gbanlist: List Of Globally Banned Of Bots.
+id: Return Group Id
+id [reply]: Return User Id.
+Sticker [Reply]: Banned User Of All Groups.
+😡 [Reply]: Banned User Of All Groups.
+======================
+broadcast: Send A Message To All Groups.
+bc [id]: Send A Message To Target Group.
+======================
+feedback: Send A Message To Admins.
+======================
+get [Value]: If You Save A Value Can Get It.
+======================
+help: Show list of plugins.
+help all: Show all commands for every plugin.
+help [plugin name]: Commands for that plugin.
+help [number]: Commands for that plugin. Type !help to get the plugin number.
+======================
+info [Reaply]: Return Username, First Name, Last Name, Stats, Position.
+======================
+add: Add Group In Moderations.
+add realm: Add Group As Realm.
+rem: Remove Group Of Moderation.
+rem realm: Removed Realm.
+rules: Return Group Rules.
+setname: Change Group Name.
+about: Return Group About.
+setphoto: Set Group Photo And Lock It.
+promote , promote[Reply]: Promote User In Group.
+demote , demote[Reply]: Demote Iser In Group.
+clean member: Remove All Users In Group.
+clean modlist: Demote All Moderation.
+clean rules: Clear Rules.
+set rules: Set Group Rules.
+set about: Set Group About.
+lock member: Nobody Can't Add User In Group.
+lock name: Nobdy Can't Change Group Name.
+lock flood: Banned Spammer If Flood Is Locked.
+unlock member: Anyone Can Add User In Group.
+unlock name: Anyone Can Change Group Name.
+unlock flood: No Action Execute I Spamming.
+owner: Return Group Owner Id.
+setowner: Set Group Owner.
+kill [Chat], kill [Realm]: Removed Group.
+setflood: Set Flood Sensitivity.
+newlink: Create New Link.
+link: Return Active Link For Group.
+kickinactive: Kick Users [Last Seen A Long Time Ago] Of Group.
+settings: Return Group Settings.
+======================
+chats: Return List Of Groups.
+join [id]: Bot Add You In Groups.
+======================
+invite [Username]: Invite User To Group[Sudo].
+======================
+lock leave: Leaving Will Banned.
+unlock leave: No Action Axecute On User If Leaving.
+======================
+linkpv: Send Link In Private Chat.
+======================
+lock adds: If User Send A Link Then Removed From Bot.
+unlock adds: Adds Is Enabled.
+======================
+lock tag: If User Send A Message With # , @ Then Bot Removed User.
+unlock tag: No Action Execute If User Send Mesage With # , @
+======================
+leave: Bot Delete Him Self Of Group.
+======================
+!plugins disable [plugin] chat : disable plugin only this chat.
+!plugins enable [plugin] chat : enable plugin only this chat.
+======================
+save: Save A Value With Subject.
+======================
+stats: Return Stats Group.
+statslist: Return Stats Group.
+stats group [id]: Return Stats Group[id].
+stats megafa: Return Users And Groups Stats.
+megasatan: Return About Text.
+======================
+tagall: Tag All Users And Show Your Message.
+======================
+Welcome: If Added User Or Delete User Bot Send A Welcome Or GoodBye Message.
+======================
 ]]
   }
   serialize_to_file(config, './data/config.lua')
