@@ -1,13 +1,13 @@
 do
 local function run(msg, matches)
-return "....." -- Enter Your Bots About
+return "....." -- mega_fa bot version 1 delta
 end
 return {
 usage ={
-"...: Return Abouts.", -- Enter Yout Bot Name
+"...: Return Abouts.", -- mega_fa
 },
 pattenrs = {
-"^([])$", -- Enter Your Patterns
+"^([Bb]ot)$", -- bot
 },
 run = run
 }
