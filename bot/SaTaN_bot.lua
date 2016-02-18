@@ -424,7 +424,7 @@ stats: Return Stats Group.
 statslist: Return Stats Group.
 stats group [id]: Return Stats Group[id].
 stats megafa: Return Users And Groups Stats.
-megasatan: Return About Text.
+mega_fa and megafa: Return About Text.
 ======================
 tagall: Tag All Users And Show Your Message.
 ======================
