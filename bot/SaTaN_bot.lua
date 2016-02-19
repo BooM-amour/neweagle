@@ -388,7 +388,7 @@ newlink: Create New Link.
 link: Return Active Link For Group.
 kickinactive: Kick Users [Last Seen A Long Time Ago] Of Group.
 setting
-
+]]
 }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
@@ -425,6 +425,7 @@ function load_plugins()
 
     if not ok then
       print('\27[31mError loading plugin '..v..'\27[39m')
+      print(tostring(io.popen("lua plugins/"..v..".lua"):read('*all')))
       print('\27[31m'..err..'\27[39m')
     end
 
