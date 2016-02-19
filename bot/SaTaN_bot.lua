@@ -200,16 +200,6 @@ function load_config( )
   for v,user in pairs(config.sudo_users) do
     print("Allowed user: " .. user)
   end
-    local config = loadfile ("./tg/tg-lua.c")()
-  for v,user in pairs(config.sudo_users) do
-   print("Allowed user: " .. user)
-  end
-  return config
-end
- local config = loadfile ("./data/config.lua")()
-  for v,user in pairs(config.sudo_users) do
-    print("Allowed user: " .. user)
-  end
   return config
 end
 
