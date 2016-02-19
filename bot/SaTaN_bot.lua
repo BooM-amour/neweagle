@@ -150,7 +150,7 @@ function match_plugin(plugin, plugin_name, msg)
   local receiver = get_receiver(msg)
 
   -- Go over patterns. If one matches it's enough.
-  for k, pattern in pairs(plugin.patterns) do
+ for k, pattern in pairs(plugin.patterns) do
     local matches = match_pattern(pattern, msg.text)
     if matches then
       print("msg matches: ", pattern)
