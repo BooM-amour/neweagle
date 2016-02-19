@@ -29,7 +29,7 @@ it into group or PM.
     description = 'Know your info or the info of a chat members.',
     },
     patterns = {
-      "^[!/]info$,
+      "^info$,
     },
     run = run
   }
