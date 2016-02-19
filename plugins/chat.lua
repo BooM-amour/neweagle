@@ -27,7 +27,7 @@ if msg.text == "mega_fa" then
 	return "Best Bot In The World!"
 end
 if msg.text == "iman" then
-	return "Ha?"
+	return "Han?"
 end
 if msg.text == "iman" then
 	return "Koft Chikaresh Dari?"
@@ -41,7 +41,7 @@ end
 if msg.text == "mamshotak" then
 	return "Nagaiiidam!"
 end
-if msg.text == "Mamshotak" then
+if msg.text == "creed" then
 	return "Nagaiidam :|"
 end
 if msg.text == "?" then
@@ -51,7 +51,7 @@ if msg.text == "Bye" then
 	return "Bye Dayus"
 end
 if msg.text == "bye" then
-	return "Bye"
+	return "boro be kiram"
 end
 if msg.text == "سلام" then
 	return "سلام عزیزم :)"
@@ -59,7 +59,7 @@ end
 if msg.text == "ممشوتک" then
 	return "نگاییدم حاجی"
 end
-if msg.text == "ایمان" then
+if msg.text == "یارا" then
 	return "رفته استخر :|"
 end
 if msg.text == "ایمان" then
@@ -76,6 +76,10 @@ if msg.text == "داداش" then
 end
 if msg.text == "ایمان" then
 	return "این آی دیشه @Dawsh_iman"
+if msg.text == "نوا" then
+	return "واسا الان میاد"
+if msg.text == "نوا" then
+	return "جانم چیکارش داری؟"
 end
 end
 
@@ -86,7 +90,7 @@ return {
     "^[Hh]i$",
 	"^[Hh]ello$",
     "^[Ss]alam$",
-    "^megafa$",
+    "^نوا$",
     "^[Mm]egafa$",
     "^[Ii]man$",
     "^[Ii]man$",
@@ -95,14 +99,14 @@ return {
 	"^[Bb]ye$",
 	"^سلام",
 	"^ممشوتک",	
-	"^ایمان",	
+	"^نوا",	
 	"^ایمان",
 	"^ایمان",
 	"^ایمان",
 	"^ایمان",
 	"^ایمان",
-	
-		}, 
+	"^نوا",
+}, 
 	run = run,
     --privileged = true,
 	pre_process = pre_process
