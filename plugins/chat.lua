@@ -76,10 +76,18 @@ if msg.text == "داداش" then
 end
 if msg.text == "ایمان" then
 	return "این آی دیشه @Dawsh_iman"
+end
 if msg.text == "نوا" then
 	return "واسا الان میاد"
+end
 if msg.text == "نوا" then
 	return "جانم چیکارش داری؟"
+end
+if msg.text == "کیر" then
+	return "تو کس عمت"
+end
+if msg.text == "kir" then
+	return "to kos amat"
 end
 end
 
@@ -108,6 +116,8 @@ return {
 	"^نوا",
         "^[Cc]reed$",
         "^داداش",
+        "^کیر",
+        "^[Kk]ir$",
 }, 
 	run = run,
     --privileged = true,
