@@ -151,10 +151,10 @@ function match_plugin(plugin, plugin_name, msg)
 
   -- Go over patterns. If one matches it's enough.
   for k, pattern in pairs(plugin.patterns) do
-    local matches = match_pattern(pattern, msg.text)
+  local matches = match_pattern(pattern, msg.text)
     if matches then
       print("msg matches: ", pattern)
-
+      
       if is_plugin_disabled_on_chat(plugin_name, receiver) then
         return nil
       end
