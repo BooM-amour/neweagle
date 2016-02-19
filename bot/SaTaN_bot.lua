@@ -151,10 +151,10 @@ function match_plugin(plugin, plugin_name, msg)
 
   -- Go over patterns. If one matches it's enough.
   for k, pattern in pairs(plugin.patterns) do
-  local matches = match_pattern(pattern, msg.text)
+    local matches = match_pattern(pattern, msg.text)
     if matches then
       print("msg matches: ", pattern)
-      
+
       if is_plugin_disabled_on_chat(plugin_name, receiver) then
         return nil
       end
@@ -387,126 +387,4 @@ setflood: Set Flood Sensitivity.
 newlink: Create New Link.
 link: Return Active Link For Group.
 kickinactive: Kick Users [Last Seen A Long Time Ago] Of Group.
-settings: Return Group Settings.
-======================
-chats: Return List Of Groups.
-join [id]: Bot Add You In Groups.
-======================
-invite [Username]: Invite User To Group[Sudo].
-======================
-lock leave: Leaving Will Banned.
-unlock leave: No Action Axecute On User If Leaving.
-======================
-linkpv: Send Link In Private Chat.
-======================
-lock adds: If User Send A Link Then Removed From Bot.
-unlock adds: Adds Is Enabled.
-======================
-lock tag: If User Send A Message With # , @ Then Bot Removed User.
-unlock tag: No Action Execute If User Send Mesage With # , @
-======================
-leave: Bot Delete Him Self Of Group.
-======================
-!plugins disable [plugin] chat : disable plugin only this chat.
-!plugins enable [plugin] chat : enable plugin only this chat.
-======================
-save: Save A Value With Subject.
-======================
-stats: Return Stats Group.
-statslist: Return Stats Group.
-stats group [id]: Return Stats Group[id].
-stats megafa: Return Users And Groups Stats.
-mega_fa and megafa: Return About Text.
-======================
-tagall: Tag All Users And Show Your Message.
-======================
-Welcome: If Added User Or Delete User Bot Send A Welcome Or GoodBye Message.
-======================
-]]
-  }
-  serialize_to_file(config, './data/config.lua')
-  print('saved config into ./data/config.lua')
-end
-
-function on_our_id (id)
-  our_id = id
-end
-
-function on_user_update (user, what)
-  --vardump (user)
-end
-
-function on_chat_update (chat, what)
-
-end
-
-function on_secret_chat_update (schat, what)
-  --vardump (schat)
-end
-
-function on_get_difference_end ()
-end
-
--- Enable plugins in config.json
-function load_plugins()
-  for k, v in pairs(_config.enabled_plugins) do
-    print("Loading plugin", v)
-
-    local ok, err =  pcall(function()
-      local t = loadfile("plugins/"..v..'.lua')()
-      plugins[v] = t
-    end)
-
-    if not ok then
-      print('\27[31mError loading plugin '..v..'\27[39m')
-      print(tostring(io.popen("lua plugins/"..v..".lua"):read('*all')))
-      print('\27[31m'..err..'\27[39m')
-    end
-
-  end
-end
-
-
--- custom add
-function load_data(filename)
-
-	local f = io.open(filename)
-	if not f then
-		return {}
-	end
-	local s = f:read('*all')
-	f:close()
-	local data = JSON.decode(s)
-
-	return data
-
-end
-
-function save_data(filename, data)
-
-	local s = JSON.encode(data)
-	local f = io.open(filename, 'w')
-	f:write(s)
-	f:close()
-
-end
-
--- Call and postpone execution for cron plugins
-function cron_plugins()
-
-  for name, plugin in pairs(plugins) do
-    -- Only plugins with cron function
-    if plugin.cron ~= nil then
-      plugin.cron()
-    end
-  end
-
-  -- Called again in 2 mins
-  postpone (cron_plugins, false, 120)
-end
-
--- Start and load values
-our_id = 0
-now = os.time()
-math.randomseed(now)
-started = false
+setting
