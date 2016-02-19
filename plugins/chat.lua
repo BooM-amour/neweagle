@@ -106,6 +106,7 @@ return {
 	"^ایمان",
 	"^ایمان",
 	"^نوا",
+        "^[Cc]reed",
 }, 
 	run = run,
     --privileged = true,
