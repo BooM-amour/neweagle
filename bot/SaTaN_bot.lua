@@ -4,7 +4,7 @@ package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
 
 require("./bot/utils")
 
-VERSION = '2'
+VERSION = '1.0'
 
 -- This function is called when tg receive a msg
 function on_msg_receive (msg)
@@ -21,11 +21,7 @@ function on_msg_receive (msg)
     msg = pre_process_msg(msg)
     if msg then
       match_plugins(msg)
-      if redis:get("bot:markread") then
-        if redis:get("bot:markread") == "on" then
-          mark_read(receiver, ok_cb, false)
-        end
-      end
+  --   mark_read(receiver, ok_cb, false)
     end
   end
 end
