@@ -1,4 +1,4 @@
-package.path = package.path .. ';.luarocks/share/lua/5.2/?.lua'
+ackage.path = package.path .. ';.luarocks/share/lua/5.2/?.lua'
   ..';.luarocks/share/lua/5.2/?/init.lua'
 package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
 
@@ -150,7 +150,7 @@ function match_plugin(plugin, plugin_name, msg)
   local receiver = get_receiver(msg)
 
   -- Go over patterns. If one matches it's enough.
- for k, pattern in pairs(plugin.patterns) do
+  for k, pattern in pairs(plugin.patterns) do
     local matches = match_pattern(pattern, msg.text)
     if matches then
       print("msg matches: ", pattern)
@@ -200,6 +200,14 @@ function load_config( )
   for v,user in pairs(config.sudo_users) do
     print("Allowed user: " .. user)
   end
+    local config = loadfile ("./tg/tg-lua.c")()
+  for v,user in pairs(config.sudo_users) do
+    print("Allowed user: " .. user)
+  end
+  local config = loadfile ("./plugins/banhammer.lua")()
+  for v,user in pairs(config.sudo_users) do
+    print("Allowed user: " .. user)
+  end
   return config
 end
 
@@ -208,6 +216,9 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
+    "welcome",
+    "server",
+    "chat",
     "onservice",
     "inrealm",
     "ingroup",
@@ -230,11 +241,10 @@ function create_config( )
     sudo_users = {152046992},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[mega_fa V 1
+    about_text = [[mega_pixel V 1
     Advanced Bot Base On Seed
     
     @Dawsh_iman[DeVeLoPeR] 
-    @Dawsh_saman_redstar
     
 ]],
     help_text_realm = [[
@@ -311,7 +321,7 @@ This command will send text to [group_id]
 
 *Only admins and sudo can use res, setowner, commands
 ]],
-    help_text = [[
+    help_text = [[ 
 
 Addiman: Add Sudo In Group.
 ======================
@@ -386,10 +396,10 @@ kill [Chat], kill [Realm]: Removed Group.
 setflood: Set Flood Sensitivity.
 newlink: Create New Link.
 link: Return Active Link For Group.
-kickinactive: Kick Users [Last Seen A Long Time Ago] Of Group.
-setting
+kickinactive: Kick Users [Last Seen A Long Time Ago] Of Group setting
+
 ]]
-}
+  }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
 end
