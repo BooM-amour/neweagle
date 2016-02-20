@@ -204,6 +204,20 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
+    "addiman",
+    "addplugin",
+    "auto_leave",
+    "info",
+    "helper",
+    "tagall",
+    "lock_badword",
+    "linlpv",
+    "lock_eng",
+    "lock_link",
+    "lock_join",
+    "lock_tag",
+    "lock_chat",
+    "spam",
     "welcome",
     "server",
     "chat",
@@ -386,7 +400,7 @@ newlink: Create New Link.
 link: Return Active Link For Group.
 kickinactive: Kick Users [Last Seen A Long Time Ago] Of Group setting
 
-]]
+]],
 
   }
   serialize_to_file(config, './data/config.lua')
