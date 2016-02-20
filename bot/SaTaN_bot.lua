@@ -211,7 +211,7 @@ function create_config( )
     "helper",
     "tagall",
     "lock_badword",
-    "linlpv",
+    "linkpv",
     "lock_eng",
     "lock_link",
     "lock_join",
