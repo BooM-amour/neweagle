@@ -243,13 +243,13 @@ function create_config( )
     "admin",
     "plugins"
     },
-    sudo_users = {152046992},--Sudo users
+    sudo_users = {116495130},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[mega_pixel V 1
     Advanced Bot Base On Seed
     
-    @Dawsh_iman[DeVeLoPeR] 
+    @Xx_mahtab_xX[DeVeLoPeR] 
     
 ]],
     help_text_realm = [[
